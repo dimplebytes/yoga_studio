@@ -18,4 +18,8 @@
 <h1>Yoga Studio</h1>
 </body>
 
+<a href="./login.php">Login</a>
+<br/>
+
+<a href="./register.php">Register</a>
 </html>
