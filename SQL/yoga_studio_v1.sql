@@ -1,10 +1,10 @@
-# To store all yoga studi data;
+--To store all yoga studi data;
 create database yoga_studio;
 
-# To use yoga_studio for all other quries.
+-- To use yoga_studio for all other quries.
 use yoga_studio;
 
-# To store yoga studio members infomation.
+-- To store yoga studio members infomation.
 create table users (
     id int primary key,
     first_name varchar(50),
@@ -44,12 +44,27 @@ create table payments (
 );
 
 
-# -- -- -- -- -- -- -- -- -- --
-
-ALTER TABLE
-    users
-ADD
-    gender char(1);
+CREATE table admin(
+    id int primary key,
+    first_name varchar(50),
+    last_name varchar(40),
+    mobile char(10),
+    password varchar(20),
+    created_ts datetime,
+    updated_ts datetime
+);
+create table login(
+    first_name varchar(50),
+    last_name varchar(40),
+    mobile char(10),
+    password varchar(20),
+    mobile char(10),
+    email_id varchar(100));
+    # -- -- -- -- -- -- -- -- -- --
+    ALTER TABLE
+        users
+    ADD
+        gender char(1);
 ALTER TABLE
     users
 MODIFY

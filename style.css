@@ -1,0 +1,19 @@
+.button-box{
+    margin: auto;
+    background-color: aqua;
+    text-align: right;
+    padding: 20px;
+}
+
+.register-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+
+.input-field{
+    padding: 10px;
+    margin: 5px;
+}
