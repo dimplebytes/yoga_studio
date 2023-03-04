@@ -60,7 +60,8 @@ create table login(
     password varchar(20),
     mobile char(10),
     email_id varchar(100));
-    # -- -- -- -- -- -- -- -- -- --
+    
+-- -- -- -- -- -- -- -- -- --
     ALTER TABLE
         users
     ADD
@@ -81,7 +82,7 @@ MODIFY
 describe users;
 
 
-#-----
+-----
 insert into users (id, first_name) values (3,'thsd');
 
 insert into classes (2, 'hatha yoga', 'yoga with flows', 'Sagar', '2023-02-20 10:00:00', 100, 10);
@@ -93,9 +94,13 @@ INSERT INTO `classes` (`id`, `name`, `descrition`, `couch_name`, `class_time`, `
 
 insert into payments (id, amount, user_id, class_id) values (1, 100, 1, 2);
  
-#--------------------------
+--------------------------
     
 select
     *
 from
     users;
+
+
+-- 4 March 2023 8:34:53 PM
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
