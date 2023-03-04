@@ -1,19 +1,62 @@
-.button-box{
-    margin: auto;
-    background-color: aqua;
-    text-align: right;
-    padding: 20px;
+h1{
+    color: rgb(139, 89, 39);
+    text-shadow: 2px 2px 4px #dfd0a2;
+    text-align: left;
+    font-style: italic; 
+    display: flex;
+    border: 30ps solid rgb(165, 100, 35);
+    font-family: "Sofia", sans-serif;
 }
+.header-div{
+    background-color: #dfd0a2;
+    margin: auto;
+    padding: 15px;
+    height: 50px;
+    
+}
+.logo-div{
+    float: left;
+}
+.button-box{
+    float: left;
+    
 
+}
 .register-div{
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 200px;
-  border: 3px solid green;
+  border: 5px solid rgb(219, 202, 109);
 }
-
 .input-field{
-    padding: 10px;
+    padding: 6px;
     margin: 5px;
+}
+.check-box{
+    margin: 6px;
+}
+.submit-btn{
+    margin: 6px;
+}
+.login-div{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 5px solid rgb(219, 202, 109);    
+}
+.input-field{
+    padding:5px;
+    margin:5px;
+    background-color: #dfd0a2;
+}
+.check-box{
+    margin: 10px;
+    background-color: #dfd0a2;
+    
+}
+.submit-btn{
+    margin: 6px;
+    background-color: #98920f;
 }
