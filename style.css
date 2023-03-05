@@ -1,62 +1,68 @@
-h1{
-    color: rgb(139, 89, 39);
-    text-shadow: 2px 2px 4px #dfd0a2;
+h1 {
+    color: rgb(235, 153, 71);
+    text-shadow: 2px 2px 4px #f7e9c0;
     text-align: left;
-    font-style: italic; 
+    font-style: italic;
     display: flex;
-    border: 30ps solid rgb(165, 100, 35);
+    border: 30ps solid rgb(236, 185, 135);
     font-family: "Sofia", sans-serif;
 }
-.header-div{
-    background-color: #dfd0a2;
+.header-div {
+    background-color: #f7f5ed;
     margin: auto;
     padding: 15px;
-    height: 50px;
-    
+    height: 90px;
 }
-.logo-div{
+.logo-div {
     float: left;
 }
-.button-box{
-    float: left;
-    
-
+.button-box {
+    float: right;
+    padding: 30px 10px 0 0;
 }
-.register-div{
-  display: none;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border: 5px solid rgb(219, 202, 109);
+.register-div {
+    display: none;
+    float: right;
+    border: 5px solid rgb(249, 245, 220);
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
 }
-.input-field{
+.login-div {
+    display: none;
+    float: right;
+    border: 5px solid rgb(241, 239, 227);
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+}
+.input-field {
     padding: 6px;
     margin: 5px;
+
 }
-.check-box{
+.check-box {
     margin: 6px;
 }
-.submit-btn{
+.submit-btn {
     margin: 6px;
 }
-.login-div{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    border: 5px solid rgb(219, 202, 109);    
-}
-.input-field{
-    padding:5px;
-    margin:5px;
+.check-box {
+    margin: 8px;
     background-color: #dfd0a2;
 }
-.check-box{
-    margin: 10px;
-    background-color: #dfd0a2;
-    
-}
-.submit-btn{
+.submit-btn {
     margin: 6px;
     background-color: #98920f;
+}
+.input-field {
+    padding: 5px;
+    margin: 5px;
+    background-color: #dfd0a2;
+}
+.form-box {
+    background-color: rgb(187, 181, 128);
+    height: 400px;
 }
