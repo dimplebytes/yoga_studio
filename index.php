@@ -15,7 +15,7 @@
   
 
 
- 
+<div> 
 <div class="header-div">
 				<div class="logo-div" id="logo-div"><h1>YOGA-Studio</h1></div>
 				<div class="button-box" id="button-box">
@@ -26,7 +26,6 @@
 			    
 		<div class="form-box">
 			
-		    	
 		    	<div class="login-div" id="login-div" style="display:none;">
 					
 					<form id="login" class="input-group" action="./backend/login_user.php" method="post">
@@ -38,7 +37,7 @@
 				</div>
  				<div class="register-div" id="register-div" style="display:none;">
 					<form id="register" class="input-group" action="./backend/register_user.php" method="post">
-					<i class="fa fa-user icon"></i>
+					
 					<input id="first_name" name="first_name" type="text" class="input-field" placeholder="First Name" required><br>
 					<input id="mobile" name="mobile" type="text" class="input-field" placeholder="Phone Number" required><br>
                     <input id="email_id" name="email_id" type="email" class="input-field" placeholder="Email Id" required><br>

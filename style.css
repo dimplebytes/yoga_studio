@@ -1,14 +1,14 @@
 h1 {
-    color: rgb(235, 153, 71);
+    color: rgb(241, 209, 50);
     text-shadow: 2px 2px 4px #f7e9c0;
     text-align: left;
     font-style: italic;
     display: flex;
-    border: 30ps solid rgb(236, 185, 135);
+    border: 30ps solid rgb(236, 208, 72);
     font-family: "Sofia", sans-serif;
 }
 .header-div {
-    background-color: #f7f5ed;
+    background-color: #f2d975;
     margin: auto;
     padding: 15px;
     height: 90px;
