@@ -18,9 +18,9 @@
                 <h1>YOGA-Studio</h1>
             </div>
         </div>
-            <a href='./../admin/class.php'> Create Class </a>
-            <a href='./../admin/class.php'> Show Users </a>
-            <a href='./../admin/class.php'> Show Payments </a>
+            <a href='./../admin/class.php'> Create_Class </a><br>
+            <a href='./../admin/class.php'> Show_Users </a><br>
+            <a href='./../admin/class.php'> Show_Payments </a><br>
             <a href='./../admin/class.php'> Update/Delete Class </a>
     </div>
     <script>
