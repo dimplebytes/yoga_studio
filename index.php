@@ -59,8 +59,6 @@
 			y.style.display = "none";
 		}
 
-
-
 		function showRegister() {
 			var x = document.getElementById("login-div");
 			var y = document.getElementById("register-div");

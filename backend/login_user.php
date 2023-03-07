@@ -17,7 +17,7 @@
     if (mysqli_num_rows($res) == 1) {
         $con->close();
         session_start();
-        header("location:./../welcome.php");
+        header("location:./../class_selection.php");
         exit();
     } else {
         echo "Error: Email Id/Password is wrong" . $q1 . "<br>" . $con->error;
