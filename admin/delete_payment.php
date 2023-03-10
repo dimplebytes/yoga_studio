@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("./../backend/get_users.php");
+include("./../backend/get_payments.php");
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +40,15 @@ include("./../backend/get_users.php");
 
     <div class="canvas">
         <div class="side-menu">
-            <ul>
-                <li><a class="active"> ADMIN HOME </a></li>
-                <li><a href='create_class.php'> Create Class </a></li>
-                <li><a href='show_users.php'> Show Users </a></li>
-                <li><a href='show_classes.php'> Show Classes </a></li>
-                <li><a href='delete_payment.php'> Show/Delete Payment </a></li>
-            </ul>
+            <div class="side-menu">
+                <ul>
+                    <li><a class="active"> ADMIN HOME </a></li>
+                    <li><a href='create_class.php'> Create Class </a></li>
+                    <li><a href='show_users.php'> Show Users </a></li>
+                    <li><a href='show_classes.php'> Show Classes </a></li>
+                    <li><a href='delete_payment.php'> Show/Delete Payment </a></li>
+                </ul>
+            </div>
         </div>
         <div class="content" style="margin-left:25%;padding:1px 16px;height:1000px;">
             <div class="row">
@@ -57,11 +59,10 @@ include("./../backend/get_users.php");
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>First Name</th>
-                                <th>Email Id</th>
-                                <th>Password</th>
-                                <th>Phone Number</th>
-                                <th>Is Admin</th>
+                                <th>User Id</th>
+                                <th>Class Id</th>
+                                <th>Amount</th>
+                                <th>Select</th>
                             </thead>
                             <tbody>
                             <?php
@@ -71,11 +72,10 @@ include("./../backend/get_users.php");
                                     ?>
                                     <tr>
                                         <td><?php echo $data['id']??''; ?></td>
-                                        <td><?php echo $data['first_name']??''; ?></td>
-                                        <td><?php echo $data['email_id']??''; ?></td>
-                                        <td><?php echo $data['password']??''; ?></td>
-                                        <td><?php echo $data['mobile']??''; ?></td>
-                                        <td><?php echo $data['is_admin']??''; ?></td>
+                                        <td><?php echo $data['amount']??''; ?></td>
+                                        <td><?php echo $data['class_id']??''; ?></td>
+                                        <td><?php echo $data['user_id']??''; ?></td>
+                                        <td><a href="./../backend/delete_payment.php?id=<?php echo $data['id'];?>"> Delete</a></td>
                                     </tr>
                                     <?php
                                     $sn++;}}else{ ?>

@@ -15,9 +15,18 @@
     $res = mysqli_query($con, $q1);
 
     if (mysqli_num_rows($res) == 1) {
-        $con->close();
-        session_start();
-        header("location:./../select_class.php");
+        while($row = mysqli_fetch_assoc($res)) {
+            $con->close();
+            session_start();
+            echo $row["is_admin"];
+            $_SESSION['user_id']= $row["id"];
+            $_SESSION['first_name']= $row["first_name"];
+            if( $row["is_admin"] == 1){
+                header("location:../admin/admin_home.php");
+            } else {
+                header("location:../user/user_home.php");
+            }
+        }
         exit();
     } else {
         echo "Error: Email Id/Password is wrong" . $q1 . "<br>" . $con->error;

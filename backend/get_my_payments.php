@@ -1,12 +1,13 @@
 <?php
 
+session_start();
 
 $con = mysqli_connect("localhost:3306", "root", "1234");
 
 mysqli_select_db($con, 'yoga_studio');
 
-$tableName = "classes";
-$columns = ['id', 'name', 'descrition', 'couch_name', 'class_time', 'fees', 'max_group_count'];
+$tableName = "payments";
+$columns = ['id', 'amount', 'class_id', 'user_id'];
 
 $db = $con;
 
@@ -23,7 +24,7 @@ function fetch_data($db, $tableName, $columns)
     } else {
 
         $columnName = implode(", ", $columns);
-        $query = "SELECT " . $columnName . " FROM $tableName" . " ORDER BY id DESC";
+        $query = "SELECT " . $columnName . " FROM $tableName" . " where user_id=".$_SESSION['user_id'];
         $result = $db->query($query);
 
         if ($result == true) {

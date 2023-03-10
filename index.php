@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon">
     <title>Yoga Studio</title>
 
@@ -28,23 +29,24 @@
             </div>
         </div>
 
-        <div class="form-box">
+        <div class="form-box" style="background-image: url('./images/yoga_1.jpg');">
 
-            <div class="login-div" id="login-div" style="display:none;">
-                <form id="login" class="input-group" action="./backend/login_user.php" method="post">
+            <div class="login-div" id="login-div" style="display:none; background: #f1f1f1;">
+                <form id="login" class="input-group" action="./backend/login_user.php" method="post" style="height: 10px;">
                     <input id="email_id" name="email_id" type="text" class="input-field" placeholder="Email Id" required><br>
                     <input id="password" name="password" type="password" class="input-field" placeholder="Enter Password" required><br>
                     <button type="submit" class="submit-btn">Login In</button>
                 </form>
             </div>
 
-            <div class="register-div" id="register-div" style="display:none;">
-                <form id="register" class="input-group" action="./backend/register_user.php" method="post">
+            <div class="register-div" id="register-div" style="display:none; background: #f1f1f1;">
+                <form id="register" class="input-group" action="backend/create_user.php" method="post" style="height: 10px;">
 					<input id="id" name="id" type="text" class="input-field" placeholder="User ID" required><br>
 					<input id="first_name" name="first_name" type="text" class="input-field" placeholder="First Name" required><br>
 					<input id="mobile" name="mobile" type="text" class="input-field" placeholder="Phone Number" required><br>
                     <input id="email_id" name="email_id" type="email" class="input-field" placeholder="Email Id" required><br>
                     <input id="password" name="password" type="password" class="input-field" placeholder="Enter password" required><br>
+                    <input id="is_admin" name="is_admin" type="checkbox" class="input-field" placeholder="Is Admin"> Is Admin<br>
                     <input type="checkbox" class="check-box"><span>I Agree to The Term & Condition</span><br>
                     <button type="submit" class="submit-btn">Register</button>
                 </form>

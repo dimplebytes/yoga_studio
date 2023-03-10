@@ -33,7 +33,6 @@ create table classes (
     max_group_count int
 );
 
-
 create table payments (
 	id int,
 	amount int,
@@ -66,6 +65,12 @@ create table login(
         users
     ADD
         gender char(1);
+
+ALTER TABLE
+    users
+    ADD
+        is_admin BOOLEAN;
+
 ALTER TABLE
     users
 MODIFY

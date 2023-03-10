@@ -1,23 +1,28 @@
 <?php
-    
+
     $id = $_POST['id'];
     $first_name = $_POST['first_name'];
     $mobile = $_POST['mobile'];
     $email_id = $_POST['email_id'];
     $password = $_POST['password'];
+    $is_admin = 0;
 
-    echo $id;
+    if ($_POST['is_admin'] == "on") {
+        $is_admin = 1;
+    }
+
     echo $first_name;
     echo $mobile;
     echo $email_id;
     echo $password;
+    echo $is_admin;
 
     session_start();
     $con = mysqli_connect("localhost:3306", "root", "1234");
     
     mysqli_select_db($con, 'yoga_studio');
 
-    $q1 = "insert into users (id, first_name, mobile, email_id, password) values ($id, '$first_name', '$mobile', '$email_id', '$password')";
+    $q1 = "insert into users (id, first_name, mobile, email_id, password, is_admin) values ($id, '$first_name', '$mobile', '$email_id', '$password',  $is_admin)";
     echo $q1;
 
     if ($con->query($q1) === TRUE) {

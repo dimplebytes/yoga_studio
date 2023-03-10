@@ -5,8 +5,8 @@ $con = mysqli_connect("localhost:3306", "root", "1234");
 
 mysqli_select_db($con, 'yoga_studio');
 
-$tableName = "classes";
-$columns = ['id', 'name', 'descrition', 'couch_name', 'class_time', 'fees', 'max_group_count'];
+$tableName = "users";
+$columns = ['id', 'first_name', 'mobile', 'email_id', 'password', 'is_admin'];
 
 $db = $con;
 
