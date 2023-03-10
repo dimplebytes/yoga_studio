@@ -36,15 +36,13 @@
 
     <div class="canvas">
         <div class="side-menu">
-            <div class="side-menu">
-                <ul>
-                    <li><a class="active"> ADMIN HOME </a></li>
-                    <li><a href='create_class.php'> Create Class </a></li>
-                    <li><a href='show_users.php'> Show Users </a></li>
-                    <li><a href='show_classes.php'> Show Classes </a></li>
-                    <li><a href='delete_payment.php'> Show/Delete Payment </a></li>
-                </ul>
-            </div>
+            <ul>
+                <li><a class="active"> ADMIN HOME </a></li>
+                <li><a href='create_class.php'> Create Class </a></li>
+                <li><a href='show_users.php'> Show Users </a></li>
+                <li><a href='show_classes.php'> Show Classes </a></li>
+                <li><a href='delete_payment.php'> Show/Delete Payment </a></li>
+            </ul>
         </div>
         <div class="content" style="margin-left:25%;padding:1px 16px;height:1000px;">
             <div class="form-box">
@@ -57,7 +55,7 @@
                         <input id="couch_name" name="couch_name" type="text" class="input-field"
                                placeholder="Couch Name" required><br>
                         <input id="class_time" name="class_time" type="text" class="input-field"
-                               placeholder="Class Date Time ex: 2015-04-03 14:00:45" required><br>
+                               placeholder="DateTime Ex:2015-04-03 14:00:45" required><br>
                         <input id="max_group_count" name="max_group_count" type="text" class="input-field"
                                placeholder="Max Group Size" required><br>
                         <input id="fees" name="fees" type="text" class="input-field" placeholder="Fees" required><br>

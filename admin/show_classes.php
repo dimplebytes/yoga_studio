@@ -29,8 +29,8 @@ include("./../backend/get_class.php");
         <ul>
             <li><a class="active"> ADMIN HOME </a></li>
             <li><a href='create_class.php'> Create Class </a></li>
-            <li><a href='show_classes.php'> Show Classes </a></li>
             <li><a href='show_users.php'> Show Users </a></li>
+            <li><a href='show_classes.php'> Show Classes </a></li>
             <li><a href='delete_payment.php'> Show/Delete Payment </a></li>
         </ul>
     </div>
