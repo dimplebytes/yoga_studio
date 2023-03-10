@@ -4,98 +4,52 @@ create database yoga_studio;
 -- To use yoga_studio for all other quries.
 use yoga_studio;
 
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS classes;
+DROP TABLE IF EXISTS payments;
+
 -- To store yoga studio members infomation.
-create table users (
-    id int primary key,
-    first_name varchar(50),
-    last_name varchar(40),
-    gender char(1),
-    dob date,
-    age int,
-    address_1 varchar(200),
-    address_2 varchar(200),
-    city varchar(200),
-    pin char(6),
-    mobile char(10),
-    email_id varchar(100),
-    password varchar(20),
-    created_ts datetime,
-    updated_ts datetime
-);
+CREATE TABLE `users` (
+                         `id` int NOT NULL,
+                         `first_name` varchar(50) DEFAULT NULL,
+                         `last_name` varchar(40) DEFAULT NULL,
+                         `gender` char(1) DEFAULT NULL,
+                         `dob` date DEFAULT NULL,
+                         `age` int DEFAULT NULL,
+                         `address_1` varchar(200) DEFAULT NULL,
+                         `address_2` varchar(200) DEFAULT NULL,
+                         `city` varchar(200) DEFAULT NULL,
+                         `pin` char(6) DEFAULT NULL,
+                         `mobile` char(10) DEFAULT NULL,
+                         `email_id` varchar(100) DEFAULT NULL,
+                         `password` varchar(20) DEFAULT NULL,
+                         `created_ts` datetime DEFAULT NULL,
+                         `updated_ts` datetime DEFAULT NULL,
+                         `is_admin` tinyint(1) DEFAULT NULL,
+                         PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-create table classes (
-    id int primary key,
-    name varchar(100),
-    descrition text,
-    couch_name varchar(100),
-    class_time datetime,
-    fees int,
-    max_group_count int
-);
+CREATE TABLE `classes` (
+                           `id` int NOT NULL,
+                           `name` varchar(100) DEFAULT NULL,
+                           `descrition` text,
+                           `couch_name` varchar(100) DEFAULT NULL,
+                           `class_time` datetime DEFAULT NULL,
+                           `fees` int DEFAULT NULL,
+                           `max_group_count` int DEFAULT NULL,
+                           PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+CREATE TABLE `payments` (
+                            `id` int DEFAULT NULL,
+                            `amount` int DEFAULT NULL,
+                            `class_id` int DEFAULT NULL,
+                            `user_id` int DEFAULT NULL,
+                            KEY `user_id` (`user_id`),
+                            KEY `class_id` (`class_id`),
+                            CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+                            CONSTRAINT `payments_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-create table payments (
-	id int,
-	amount int,
-	class_id int,
-	user_id int,
-	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (class_id) REFERENCES classes(id)
-);
-
-
-CREATE table admin(
-    id int primary key,
-    first_name varchar(50),
-    last_name varchar(40),
-    mobile char(10),
-    password varchar(20),
-    created_ts datetime,
-    updated_ts datetime
-);
-create table login(
-    first_name varchar(50),
-    last_name varchar(40),
-    mobile char(10),
-    password varchar(20),
-    mobile char(10),
-    email_id varchar(100));
-    # -- -- -- -- -- -- -- -- -- --
-    ALTER TABLE
-        users
-    ADD
-        gender char(1);
-ALTER TABLE
-    users
-MODIFY
-    mobile int NOT NULL;
-truncate table users;
-ALTER TABLE
-    users
-ADD
-    PRIMARY KEY (id);
-ALTER TABLE
-    users
-MODIFY
-    id NOT NULL AUTO_INCREMENT;
-describe users;
-
-
-#-----
-insert into users (id, first_name) values (3,'thsd');
-
-insert into classes (2, 'hatha yoga', 'yoga with flows', 'Sagar', '2023-02-20 10:00:00', 100, 10);
-
-INSERT INTO `classes` (3, 'hatah yga', 'yoga with flow', 'sagar', '2023-01-02 10:00:00', 100, 10);
-
-INSERT INTO `classes` (`id`, `name`, `descrition`, `couch_name`, `class_time`, `fees`, `max_group_count`) VALUES
-(3, 'hatah yga', 'yoga with flow', 'sagar', '2023-01-02 10:00:00', 100, 10);
-
-insert into payments (id, amount, user_id, class_id) values (1, 100, 1, 2);
- 
-#--------------------------
-    
-select
-    *
-from
-    users;
+-- 4 March 2023 8:34:53 PM
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';

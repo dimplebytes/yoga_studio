@@ -18,13 +18,13 @@
     echo $q1;
 
     if ($con->query($q1) === TRUE) {
-        echo "<br>New Class created successfully</br> <a href='./../index.php'> Go Home </a>";
+        echo "<br>New Class created successfully</br> <a href='../admin/admin_home.php'> Go Home </a>";
     } else {
         echo "Error: " . $q1 . "<br>" . $con->error;
     }
 
     $con->close();
 
-    
 ?>
+
 
