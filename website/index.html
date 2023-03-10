@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+
+<div>
+
+    <div class="header-div" style="font-size: large;">
+        <div class="logo-div" id="logo-div">
+            <h1 class="logo" style="font-size: 4rem;">YOGA-Studio</h1>
+        </div>
+        <div class="button-box" id="button-box" style="font-size: medium;">
+            <button type="button" class="toggle-btn" onclick="showLogin()">Login</button>
+            <button type="button" class="toggle-btn" onclick="showRegister()">Register</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="home" class="back">
+    <div class="mian-home">
+        <div class="login-div" id="login-div" style="display:none; background: #f1f1f1;">
+            <form id="login" class="input-group" action="./../backend/login_user.php" method="post" style="height: 10px;">
+                <input id="email_id" name="email_id" type="text" class="input-field" placeholder="Email Id" required><br>
+                <input id="password" name="password" type="password" class="input-field" placeholder="Enter Password" required><br>
+                <button type="submit" class="submit-btn">Login In</button>
+            </form>
+        </div>
+
+        <div class="register-div" id="register-div" style="display:none; background: #f1f1f1;">
+            <form id="register" class="input-group" action="./../backend/create_user.php" method="post" style="height: 10px;">
+                <input id="id" name="id" type="text" class="input-field" placeholder="User ID" required><br>
+                <input id="first_name" name="first_name" type="text" class="input-field" placeholder="First Name" required><br>
+                <input id="mobile" name="mobile" type="text" class="input-field" placeholder="Phone Number" required><br>
+                <input id="email_id" name="email_id" type="email" class="input-field" placeholder="Email Id" required><br>
+                <input id="password" name="password" type="password" class="input-field" placeholder="Enter password" required><br>
+                <input id="is_admin" name="is_admin" type="checkbox" class="input-field" placeholder="Is Admin"> Is Admin<br>
+                <input type="checkbox" class="check-box"><span>I Agree to The Term & Condition</span><br>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+        <div class="inner-home">
+            <img src="images/for bg.png" alt="">
+        </div>
+
+        <div class="inner-home">
+            <div class="inner-content">
+                <h1>Yoga class</h1>
+                <p>Yoga is a group of physical,mental, and spiritual practices or disciplines which originated in
+                    ancient india and aim to control and still the mind recognizing a derached witnessconsciousness
+                    untouched by the main and mundane suffering.</p>
+                <a href="#">Register now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="our-classes">
+
+    <h1>our classes</h1>
+
+    <div class="main-class">
+        <div class="inner-class">
+            <img src="images/class1.png" alt="">
+            <div class="class-content">
+                <h2>Kids class</h2>
+                <p>Kids yoga teaches our little warriors the importance of movement and stillness! Each weekly class has
+                    a different theme. </p>
+                <a href="#">register now</a>
+            </div>
+        </div>
+
+        <div class="inner-class">
+            <img src="images/class1.png" alt="">
+            <div class="class-content">
+                <h2>Junior class</h2>
+                <p>Hatha yoga classes tend to be good fof beginners they're slowermoving. Vinyasa, Ashtanga, and power
+                    yoga classes can be more challeniging etc.</p>
+                <a href="#">register now</a>
+            </div>
+        </div>
+
+        <div class="inner-class">
+            <img src="images/class1.png" alt="">
+            <div class="class-content">
+                <h2>Senior class</h2>
+                <p>Hatha yoga,restorative yoga,and yoga with chair exercises are usually more suitable for older adults
+                    they involvoe holding poses for longer periods of time.</p>
+                <a href="#">register now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="our-instructor">
+    <h1>Our instructor</h1>
+    <div class="main-instructor">
+        <div class="inner-instructor">
+            <div class="inner-content-instructor">
+                <h2>best <br> Instructor</h2>
+                <p>Most students call their instructor by their first name – that’s it. In general, there isn’t one
+                    specific name or title for them. They might be called a yoga instructor, yoga teacher, or simply a
+                    teacher/instructor. Sometimes they might be called a “yoga master” – we’ll cover that below. </p>
+                <a href="#">Read more</a>
+            </div>
+
+        </div>
+
+        <div class="inner-instructor">
+            <img src="images/Instructer.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="our-instructor">
+    <div class="main-instructor">
+
+        <div class="inner-instructor">
+            <img src="images/new experience.png" alt="">
+        </div>
+
+        <div class="inner-instructor">
+            <div class="inner-content-instructor">
+                <h2>New<br> Experience</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cum non! Eveniet qui doloribus
+                    rem ipsa, veritatis culpa </p>
+                <a href="#">Read more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="gallery">
+    <h1>gallery</h1>
+    <div class="main-gallery">
+        <div class="inner-gallery">
+            <img src="images/gallery1.jpg" alt="">
+        </div>
+
+        <div class="inner-gallery">
+            <img src="images/gallery2.jpg" alt="">
+        </div>
+
+        <div class="inner-gallery">
+            <img src="images/gallery3.jpg" alt="">
+        </div>
+
+        <div class="inner-gallery">
+            <img src="images/gallery4.jpg" alt="">
+        </div>
+
+        <div class="inner-gallery">
+            <img src="images/gallery5.jpg" alt="">
+        </div>
+
+        <div class="inner-gallery">
+            <img src="images/gallery6.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+<div class="our-prices">
+    <h1>prices</h1>
+    <div class="main-prices">
+        <div class="inner-prices">
+            <h2>kids classes</h2>
+            <h3>prices :2000Rs</h3>
+            <div class="price-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <a href="#">Register now</a>
+        </div>
+
+        <div class="inner-prices">
+            <h2>Junior classes</h2>
+            <h3>prices :3000Rs</h3>
+            <div class="price-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <a href="#">Register now</a>
+        </div>
+
+        <div class="inner-prices">
+            <h2>Senior classes</h2>
+            <h3>prices :3500Rs</h3>
+            <div class="price-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <a href="#">Register now</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+<script>
+    function showLogin() {
+        var x = document.getElementById("login-div");
+        var y = document.getElementById("register-div");
+        x.style.display = "flex";
+        y.style.display = "none";
+    }
+
+    function showRegister() {
+        var x = document.getElementById("login-div");
+        var y = document.getElementById("register-div");
+        x.style.display = "none";
+        y.style.display = "flex";
+    }
+</script>
+</body>
+</html>
