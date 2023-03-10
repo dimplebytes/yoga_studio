@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$con = mysqli_connect("localhost:3306", "root", "1234");
+$con = mysqli_connect("localhost:3306", "root", "");
 
 mysqli_select_db($con, 'yoga_studio');
 
