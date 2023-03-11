@@ -23,7 +23,7 @@ session_start();
 
     <div class="header-div">
         <div class="logo-div" id="logo-div">
-            <h1>YOGA-Studio</h1>
+            <a href="../website/index.html"> <h1>YOGA-Studio</h1></a>
         </div>
         <div class="button-box" id="button-box">
             <?php
@@ -38,7 +38,7 @@ session_start();
     <div class="canvas">
         <div>
             <ul>
-                <li><a class="active" href='./user_home.php'> USER HOME </a></li>
+                <li><a href='./user_home.php'  class="active" href='./user_home.php'> USER HOME </a></li>
                 <li><a href='./select_class.php' style="display: block; "> Select Class </a></li>
                 <li><a href='./my_classes.php' style="display: block;"> My Classes </a></li>
             </ul>

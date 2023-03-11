@@ -1,14 +1,15 @@
---To store all yoga studi data;
+# To store all yoga studi data;
 create database yoga_studio;
 
--- To use yoga_studio for all other quries.
+# To use yoga_studio for all other quries.
 use yoga_studio;
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS classes;
 DROP TABLE IF EXISTS payments;
 
--- To store yoga studio members infomation.
+#To store yoga studio members infomation.
+
 CREATE TABLE `users` (
                          `id` int NOT NULL,
                          `first_name` varchar(50) DEFAULT NULL,
@@ -27,7 +28,7 @@ CREATE TABLE `users` (
                          `updated_ts` datetime DEFAULT NULL,
                          `is_admin` tinyint(1) DEFAULT NULL,
                          PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `classes` (
                            `id` int NOT NULL,
@@ -38,7 +39,7 @@ CREATE TABLE `classes` (
                            `fees` int DEFAULT NULL,
                            `max_group_count` int DEFAULT NULL,
                            PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `payments` (
                             `id` int DEFAULT NULL,
@@ -49,7 +50,4 @@ CREATE TABLE `payments` (
                             KEY `class_id` (`class_id`),
                             CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
                             CONSTRAINT `payments_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- 4 March 2023 8:34:53 PM
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+);

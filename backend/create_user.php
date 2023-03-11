@@ -7,9 +7,9 @@
     $password = $_POST['password'];
     $is_admin = 0;
 
-    if ($_POST['is_admin'] == "on") {
+    /*if ($_POST['is_admin'] == "on") {
         $is_admin = 1;
-    }
+    }*/
 
     echo $first_name;
     echo $mobile;
@@ -26,7 +26,7 @@
     echo $q1;
 
     if ($con->query($q1) === TRUE) {
-        echo "<br>New user created successfully</br> <a href='./../index.php'> Go Home </a>";
+        echo "<br>New user created successfully</br> <a href='./../website/index.html'> Go Home </a>";
     } else {
         echo "Error: " . $q1 . "<br>" . $con->error;
     }
