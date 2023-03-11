@@ -25,6 +25,8 @@
             </div>
             <div class="button-box" id="button-box">
                 <?php
+                $_SESSION['user_id']= '1';
+                $_SESSION['first_name']= 'Admin';
                 if(isset($_SESSION['user_id'])) {
                     echo "User ID: " . $_SESSION['user_id'] . " User Name: " .$_SESSION['first_name'];
                 }

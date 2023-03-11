@@ -30,6 +30,8 @@ include("./../backend/get_payments.php");
         </div>
         <div class="button-box" id="button-box">
             <?php
+            $_SESSION['user_id']= '1';
+            $_SESSION['first_name']= 'Admin';
             if(isset($_SESSION['user_id'])) {
                 echo "User ID: " . $_SESSION['user_id'] . " User Name: " .$_SESSION['first_name'];
             }
@@ -72,9 +74,9 @@ include("./../backend/get_payments.php");
                                     ?>
                                     <tr>
                                         <td><?php echo $data['id']??''; ?></td>
-                                        <td><?php echo $data['amount']??''; ?></td>
-                                        <td><?php echo $data['class_id']??''; ?></td>
                                         <td><?php echo $data['user_id']??''; ?></td>
+                                        <td><?php echo $data['class_id']??''; ?></td>
+                                        <td><?php echo $data['amount']??''; ?></td>
                                         <td><a href="./../backend/delete_payment.php?id=<?php echo $data['id'];?>"> Delete</a></td>
                                     </tr>
                                     <?php
