@@ -21,7 +21,7 @@
 
         <div class="header-div">
             <div class="logo-div" id="logo-div">
-                <h1>YOGA-Studio</h1>
+                <a href="../website/index.html"> <h1>YOGA-Studio</h1></a>
             </div>
             <div class="button-box" id="button-box">
                 <?php
@@ -36,7 +36,7 @@
         <div style="margin: 0;">
             <div class="side-menu">
                 <ul>
-                    <li><a class="active"> ADMIN HOME </a></li>
+                    <li><a href='admin_home.php' class="active"> ADMIN HOME </a></li>
                     <li><a href='create_class.php'> Create Class </a></li>
                     <li><a href='show_users.php'> Show Users </a></li>
                     <li><a href='show_classes.php'> Show Classes </a></li>

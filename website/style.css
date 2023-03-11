@@ -156,7 +156,7 @@ html{
     text-align: center;
 }
 .inner-home img{
-    width: 100%;
+    width: 50%;
 }
 .inner-content h1{
     color: var(--mainclr);
