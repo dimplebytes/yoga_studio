@@ -19,7 +19,7 @@ session_start();
             echo "User ID: " . $_SESSION['user_id'] . " User Name: " .$_SESSION['first_name'];
         }
         ?>
-        <button type="button" class="toggle-btn" onclick="window.location = './../index.php'">Logout</button>
+        <button type="button" class="toggle-btn" onclick="window.location = './../website/index.html'">Logout</button>
     </div>
 </div>
 
